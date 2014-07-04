@@ -1,0 +1,25 @@
+<%= form_for(@directive) do |f| %>
+  <% if @directive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@directive.errors.count, "error") %> prohibited this directive from being saved:</h2>
+
+      <ul>
+      <% @directive.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :instructions %><br>
+    <%= f.text_area :instructions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

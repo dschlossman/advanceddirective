@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @directive.name %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @directive.instructions %>
+</p>
+
+<%= link_to 'Edit', edit_directive_path(@directive) %> |
+<%= link_to 'Back', directives_path %>

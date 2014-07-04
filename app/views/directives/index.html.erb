@@ -1,0 +1,27 @@
+<h1>Listing directives</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instructions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @directives.each do |directive| %>
+      <tr>
+        <td><%= directive.name %></td>
+        <td><%= directive.instructions %></td>
+        <td><%= link_to 'Show', directive %></td>
+        <td><%= link_to 'Edit', edit_directive_path(directive) %></td>
+        <td><%= link_to 'Destroy', directive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Directive', new_directive_path %>
